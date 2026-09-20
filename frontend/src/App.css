@@ -1,0 +1,23 @@
+/* Global styles for UdyamSaathi. Most component styling is inline
+   (see the component files), so this file only holds page-wide basics. */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #F6F2E9;
+  color: #2B2B22;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+}
+
+button {
+  font-family: inherit;
+}

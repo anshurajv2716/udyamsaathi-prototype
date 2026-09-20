@@ -1,0 +1,93 @@
+{
+  "district": "Pune (Rural Talukas)",
+  "state": "Maharashtra",
+  "population_context": {
+    "target_talukas": ["Ambegaon", "Maval"],
+    "ambegaon_taluka_population_2011": 235972,
+    "ambegaon_villages_2011": 143,
+    "maval_taluka_population_2011": 377559,
+    "value": "Rural taluka population density is moderate-to-high due to proximity to Pune city; peri-urban belts (e.g. Maval) have stronger connectivity and higher urbanization (41.79% urban in Maval, 2011) than interior talukas like Ambegaon (8.00% urban, 2011).",
+    "evidence_tag": "direct_data",
+    "source_note": "Census of India 2011. Update if newer census microdata becomes available before submission."
+  },
+  "msme_density_reference": {
+    "district_total_udyam_registered_msmes": 136531,
+    "as_of_date": "2021-07-31",
+    "evidence_tag": "direct_data",
+    "source_note": "Total Udyam-registered MSMEs for Pune district, from DC-MSME bulletin. District-wide total, not sector-specific."
+  },
+  "sectors": {
+    "dairy": {
+      "demand_proxy": 78,
+      "competition_proxy": 55,
+      "seasonality_risk": 20,
+      "logistics_access": 82,
+      "investment_range_min": 80000,
+      "investment_range_max": 1500000,
+      "notes": "Strong demand due to proximity to Pune urban milk market; moderate competition from existing dairy cooperatives; low seasonality risk (year-round demand); good logistics due to road connectivity to city.",
+      "notes_hi": "पुणे के शहरी दूध बाज़ार से निकटता के कारण मजबूत मांग; मौजूदा डेयरी सहकारी समितियों से मध्यम प्रतिस्पर्धा; कम मौसमी जोखिम (साल भर मांग बनी रहती है); शहर से सड़क संपर्क के कारण अच्छी लॉजिस्टिक्स सुविधा।",
+      "notes_mr": "पुण्याच्या शहरी दूध बाजारपेठेच्या जवळीकीमुळे मजबूत मागणी; विद्यमान दुग्ध सहकारी संस्थांकडून मध्यम स्पर्धा; कमी हंगामी जोखीम (वर्षभर मागणी असते); शहराशी रस्ता संपर्कामुळे चांगली लॉजिस्टिक्स सुविधा.",
+      "evidence_tag": "expert_rule"
+    },
+    "retail": {
+      "demand_proxy": 70,
+      "competition_proxy": 68,
+      "seasonality_risk": 15,
+      "logistics_access": 85,
+      "investment_range_min": 50000,
+      "investment_range_max": 800000,
+      "notes": "Kirana/retail demand steady but competition is higher due to density of existing small shops near peri-urban belts.",
+      "notes_hi": "किराना/खुदरा मांग स्थिर है, लेकिन उप-शहरी क्षेत्रों के पास मौजूदा छोटी दुकानों की सघनता के कारण प्रतिस्पर्धा अधिक है।",
+      "notes_mr": "किराणा/किरकोळ मागणी स्थिर आहे, पण निमशहरी भागांजवळील विद्यमान लहान दुकानांच्या घनतेमुळे स्पर्धा जास्त आहे.",
+      "evidence_tag": "expert_rule"
+    },
+    "tailoring": {
+      "demand_proxy": 58,
+      "competition_proxy": 40,
+      "seasonality_risk": 35,
+      "logistics_access": 75,
+      "investment_range_min": 30000,
+      "investment_range_max": 300000,
+      "notes": "Moderate steady demand, lower competition than retail/dairy, but seasonal spikes around festivals create some demand volatility.",
+      "notes_hi": "मध्यम स्थिर मांग, खुदरा/डेयरी की तुलना में कम प्रतिस्पर्धा, लेकिन त्योहारों के आसपास मौसमी उछाल से मांग में कुछ उतार-चढ़ाव होता है।",
+      "notes_mr": "मध्यम स्थिर मागणी, किरकोळ/दुग्धव्यवसायापेक्षा कमी स्पर्धा, पण सणांच्या आसपास हंगामी वाढीमुळे मागणीत काही चढ-उतार होतो.",
+      "evidence_tag": "expert_rule"
+    },
+    "poultry": {
+      "demand_proxy": 72,
+      "competition_proxy": 48,
+      "seasonality_risk": 25,
+      "logistics_access": 78,
+      "investment_range_min": 60000,
+      "investment_range_max": 1200000,
+      "notes": "Growing demand near urban Pune markets for eggs and broiler chicken; moderate competition, some seasonality around summer heat affecting yields.",
+      "notes_hi": "पुणे के शहरी बाजारों के पास अंडों और ब्रॉयलर चिकन की बढ़ती मांग; मध्यम प्रतिस्पर्धा, गर्मी के मौसम में उत्पादन पर कुछ मौसमी प्रभाव।",
+      "notes_mr": "पुण्याच्या शहरी बाजारपेठांजवळ अंडी आणि ब्रॉयलर कोंबडीची वाढती मागणी; मध्यम स्पर्धा, उन्हाळ्याच्या हंगामात उत्पादनावर काही हंगामी परिणाम.",
+      "evidence_tag": "expert_rule"
+    },
+    "food_processing": {
+      "demand_proxy": 65,
+      "competition_proxy": 42,
+      "seasonality_risk": 30,
+      "logistics_access": 80,
+      "investment_range_min": 70000,
+      "investment_range_max": 1000000,
+      "notes": "Small-scale food processing (papad, pickles, namkeen) benefits from Pune's urban consumer base; moderate competition, some seasonal demand shifts around festivals.",
+      "notes_hi": "छोटे स्तर का खाद्य प्रसंस्करण (पापड़, अचार, नमकीन) पुणे के शहरी उपभोक्ता आधार से लाभान्वित होता है; मध्यम प्रतिस्पर्धा, त्योहारों के आसपास मांग में कुछ मौसमी बदलाव।",
+      "notes_mr": "लहान स्तरावरील अन्न प्रक्रिया (पापड, लोणची, नमकीन) पुण्याच्या शहरी ग्राहक आधाराचा फायदा घेते; मध्यम स्पर्धा, सणांच्या आसपास मागणीत काही हंगामी बदल.",
+      "evidence_tag": "expert_rule"
+    },
+    "agri_input_retail": {
+      "demand_proxy": 60,
+      "competition_proxy": 38,
+      "seasonality_risk": 40,
+      "logistics_access": 70,
+      "investment_range_min": 100000,
+      "investment_range_max": 900000,
+      "notes": "Seeds/fertilizer/pesticide retail demand tied closely to agricultural sowing seasons, creating higher seasonality risk; lower competition in interior talukas.",
+      "notes_hi": "बीज/उर्वरक/कीटनाशक खुदरा मांग कृषि बुवाई के मौसम से निकटता से जुड़ी है, जिससे अधिक मौसमी जोखिम बनता है; आंतरिक तालुकों में कम प्रतिस्पर्धा।",
+      "notes_mr": "बियाणे/खत/कीटकनाशक किरकोळ मागणी कृषी पेरणीच्या हंगामाशी घट्ट जोडलेली आहे, ज्यामुळे जास्त हंगामी जोखीम निर्माण होते; आतील तालुक्यांमध्ये कमी स्पर्धा.",
+      "evidence_tag": "expert_rule"
+    }
+  }
+}

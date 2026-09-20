@@ -1,0 +1,188 @@
+{
+  "dairy": {
+    "fixed_capital_pct": 0.55,
+    "working_capital_pct": 0.30,
+    "rolling_capital_pct": 0.15,
+    "fixed_items": {
+      "en": ["1 milch buffalo or cow", "Basic shed/shelter construction"],
+      "hi": ["1 दुधारू भैंस या गाय", "बुनियादी शेड/आश्रय निर्माण"],
+      "mr": ["1 दुभती म्हैस किंवा गाय", "मूलभूत शेड/निवारा बांधकाम"]
+    },
+    "working_items": {
+      "en": ["Feed for first 2-3 months", "Basic utensils and milking equipment"],
+      "hi": ["पहले 2-3 महीनों के लिए चारा", "बुनियादी बर्तन और दूध निकालने के उपकरण"],
+      "mr": ["पहिल्या 2-3 महिन्यांसाठी चारा", "मूलभूत भांडी आणि दूध काढण्याची उपकरणे"]
+    },
+    "rolling_items": {
+      "en": ["Veterinary/emergency buffer"],
+      "hi": ["पशु चिकित्सा/आपातकालीन बफर"],
+      "mr": ["पशुवैद्यकीय/आणीबाणी राखीव निधी"]
+    },
+    "cash_flow_note": {
+      "en": "Milk sales typically begin generating steady revenue only after the animal settles in and lactation stabilizes — usually within the first 2-3 months. Budget for feed and upkeep costs during this window before relying on sales income.",
+      "hi": "दूध की बिक्री से स्थिर आय आमतौर पर तभी शुरू होती है जब पशु व्यवस्थित हो जाता है और दूध उत्पादन स्थिर हो जाता है — आमतौर पर पहले 2-3 महीनों के भीतर। बिक्री आय पर निर्भर होने से पहले इस अवधि के लिए चारे और रखरखाव की लागत का बजट रखें।",
+      "mr": "दुधाच्या विक्रीतून स्थिर उत्पन्न सहसा जनावर स्थिरावल्यानंतर आणि दूध उत्पादन स्थिर झाल्यावरच सुरू होते — साधारणपणे पहिल्या 2-3 महिन्यांत. विक्रीच्या उत्पन्नावर अवलंबून राहण्यापूर्वी या काळासाठी चारा आणि देखभालीच्या खर्चाचे बजेट ठेवा."
+    },
+    "notes": {
+      "en": "Dairy is asset-heavy upfront (the animal + shelter), so a larger fixed-capital share is realistic. Working capital covers feed until milk sales begin generating cash flow.",
+      "hi": "डेयरी शुरुआत में अधिक संपत्ति-प्रधान है (पशु + आश्रय), इसलिए अधिक स्थायी पूंजी हिस्सा यथार्थवादी है। कार्यशील पूंजी चारे को तब तक कवर करती है जब तक दूध की बिक्री से नकदी प्रवाह शुरू नहीं होता।",
+      "mr": "दुग्धव्यवसाय सुरुवातीला मालमत्ता-प्रधान असतो (जनावर + निवारा), त्यामुळे मोठा स्थिर भांडवल वाटा वास्तववादी आहे. दुधाच्या विक्रीतून रोख प्रवाह सुरू होईपर्यंत खेळते भांडवल चारा खर्च भागवते."
+    },
+    "evidence_tag": "expert_rule"
+  },
+  "retail": {
+    "fixed_capital_pct": 0.35,
+    "working_capital_pct": 0.50,
+    "rolling_capital_pct": 0.15,
+    "fixed_items": {
+      "en": ["Shop fixtures, counter, shelving"],
+      "hi": ["दुकान की फिटिंग, काउंटर, शेल्फिंग"],
+      "mr": ["दुकानाची फिटिंग्ज, काउंटर, शेल्व्हिंग"]
+    },
+    "working_items": {
+      "en": ["Initial inventory/stock purchase", "First month's rent/utilities"],
+      "hi": ["प्रारंभिक इन्वेंटरी/स्टॉक खरीद", "पहले महीने का किराया/उपयोगिताएं"],
+      "mr": ["सुरुवातीचा माल/स्टॉक खरेदी", "पहिल्या महिन्याचे भाडे/उपयुक्तता"]
+    },
+    "rolling_items": {
+      "en": ["Buffer for slow-moving stock or price fluctuation"],
+      "hi": ["धीमी गति से बिकने वाले स्टॉक या मूल्य में उतार-चढ़ाव के लिए बफर"],
+      "mr": ["हळू विकला जाणारा साठा किंवा किंमतीतील चढ-उतारासाठी राखीव निधी"]
+    },
+    "cash_flow_note": {
+      "en": "Retail typically generates revenue from day one of opening, but early weeks often have lower footfall while the shop becomes known locally. Expect thinner cash flow for the first 4-6 weeks.",
+      "hi": "खुदरा व्यवसाय आमतौर पर खुलने के पहले दिन से ही आय देना शुरू कर देता है, लेकिन शुरुआती हफ्तों में दुकान के स्थानीय रूप से जाने-पहचाने जाने तक ग्राहकों की आवाजाही कम होती है। पहले 4-6 हफ्तों के लिए कम नकदी प्रवाह की अपेक्षा करें।",
+      "mr": "किरकोळ व्यवसाय सहसा उघडण्याच्या पहिल्या दिवसापासूनच उत्पन्न देण्यास सुरुवात करतो, पण सुरुवातीच्या आठवड्यांत दुकान स्थानिक पातळीवर ओळखले जाईपर्यंत ग्राहकांची वर्दळ कमी असते. पहिल्या 4-6 आठवड्यांसाठी कमी रोख प्रवाहाची अपेक्षा ठेवा."
+    },
+    "notes": {
+      "en": "Retail is inventory-heavy rather than asset-heavy, so working capital (stock) takes the largest share.",
+      "hi": "खुदरा व्यवसाय संपत्ति-प्रधान के बजाय इन्वेंटरी-प्रधान है, इसलिए कार्यशील पूंजी (स्टॉक) का हिस्सा सबसे बड़ा होता है।",
+      "mr": "किरकोळ व्यवसाय मालमत्ता-प्रधान न राहता माल-प्रधान असतो, त्यामुळे खेळत्या भांडवलाचा (साठा) वाटा सर्वात मोठा असतो."
+    },
+    "evidence_tag": "expert_rule"
+  },
+  "tailoring": {
+    "fixed_capital_pct": 0.45,
+    "working_capital_pct": 0.40,
+    "rolling_capital_pct": 0.15,
+    "fixed_items": {
+      "en": ["1-2 sewing machines", "Basic furniture/workspace setup"],
+      "hi": ["1-2 सिलाई मशीनें", "बुनियादी फर्नीचर/कार्यस्थल सेटअप"],
+      "mr": ["1-2 शिलाई मशीन", "मूलभूत फर्निचर/कामाची जागा उभारणी"]
+    },
+    "working_items": {
+      "en": ["Fabric and thread stock", "First month's operating costs"],
+      "hi": ["कपड़ा और धागा स्टॉक", "पहले महीने की परिचालन लागत"],
+      "mr": ["कापड आणि धागा साठा", "पहिल्या महिन्याचा परिचालन खर्च"]
+    },
+    "rolling_items": {
+      "en": ["Buffer for order-size fluctuations"],
+      "hi": ["ऑर्डर के आकार में उतार-चढ़ाव के लिए बफर"],
+      "mr": ["ऑर्डरच्या आकारातील चढ-उतारासाठी राखीव निधी"]
+    },
+    "cash_flow_note": {
+      "en": "Revenue depends on order volume, which can be irregular initially while building a customer base. Festival and wedding seasons tend to bring concentrated demand, so cash flow may be uneven month to month.",
+      "hi": "आय ऑर्डर की मात्रा पर निर्भर करती है, जो ग्राहक आधार बनाते समय शुरुआत में अनियमित हो सकती है। त्योहार और शादी के मौसम में मांग केंद्रित होती है, इसलिए नकदी प्रवाह महीने-दर-महीने असमान हो सकता है।",
+      "mr": "उत्पन्न ऑर्डरच्या प्रमाणावर अवलंबून असते, जे ग्राहक तयार करताना सुरुवातीला अनियमित असू शकते. सण आणि लग्नसराईच्या हंगामात मागणी एकवटलेली असते, त्यामुळे रोख प्रवाह महिन्यागणिक असमान असू शकतो."
+    },
+    "notes": {
+      "en": "Balanced between equipment (machines) and recurring material costs.",
+      "hi": "उपकरण (मशीनों) और आवर्ती सामग्री लागत के बीच संतुलित।",
+      "mr": "उपकरणे (मशीन) आणि वारंवार लागणाऱ्या साहित्य खर्चामध्ये संतुलित."
+    },
+    "evidence_tag": "expert_rule"
+  },
+  "poultry": {
+    "fixed_capital_pct": 0.50,
+    "working_capital_pct": 0.35,
+    "rolling_capital_pct": 0.15,
+    "fixed_items": {
+      "en": ["Coop/shed construction", "Initial batch of birds"],
+      "hi": ["कूप/शेड निर्माण", "पक्षियों का प्रारंभिक जत्था"],
+      "mr": ["कोंबडी घर/शेड बांधकाम", "पक्ष्यांची सुरुवातीची तुकडी"]
+    },
+    "working_items": {
+      "en": ["Feed for first cycle", "Basic equipment (feeders, waterers)"],
+      "hi": ["पहले चक्र के लिए चारा", "बुनियादी उपकरण (फीडर, वाटरर)"],
+      "mr": ["पहिल्या चक्रासाठी खाद्य", "मूलभूत उपकरणे (खाद्य आणि पाणी भांडी)"]
+    },
+    "rolling_items": {
+      "en": ["Buffer for disease/mortality risk"],
+      "hi": ["रोग/मृत्यु दर जोखिम के लिए बफर"],
+      "mr": ["रोग/मृत्यू जोखमीसाठी राखीव निधी"]
+    },
+    "cash_flow_note": {
+      "en": "Egg-laying or broiler cycles typically take 5-7 weeks to reach a sellable stage, so expect a gap between initial spend and first revenue.",
+      "hi": "अंडे देने या ब्रॉयलर चक्र आमतौर पर बिक्री योग्य चरण तक पहुंचने में 5-7 सप्ताह लेते हैं, इसलिए प्रारंभिक खर्च और पहली आय के बीच अंतर की अपेक्षा करें।",
+      "mr": "अंडी देण्याचे किंवा ब्रॉयलर चक्र सहसा विक्रीयोग्य टप्प्यावर पोहोचण्यासाठी 5-7 आठवडे घेतात, त्यामुळे सुरुवातीचा खर्च आणि पहिले उत्पन्न यामध्ये अंतर अपेक्षित ठेवा."
+    },
+    "notes": {
+      "en": "Similar to dairy in being asset-heavy, though the animal cost is spread across a batch rather than one large purchase.",
+      "hi": "डेयरी की तरह संपत्ति-प्रधान, हालांकि पशु की लागत एक बड़ी खरीद के बजाय एक जत्थे में फैली होती है।",
+      "mr": "दुग्धव्यवसायाप्रमाणेच मालमत्ता-प्रधान, तरी जनावरांचा खर्च एका मोठ्या खरेदीऐवजी एका तुकडीत विभागलेला असतो."
+    },
+    "evidence_tag": "expert_rule"
+  },
+  "food_processing": {
+    "fixed_capital_pct": 0.40,
+    "working_capital_pct": 0.45,
+    "rolling_capital_pct": 0.15,
+    "fixed_items": {
+      "en": ["Basic processing equipment (grinder, sealing tools, etc.)"],
+      "hi": ["बुनियादी प्रसंस्करण उपकरण (ग्राइंडर, सीलिंग उपकरण, आदि)"],
+      "mr": ["मूलभूत प्रक्रिया उपकरणे (ग्राइंडर, सीलिंग साधने, इ.)"]
+    },
+    "working_items": {
+      "en": ["Raw material stock (first production cycles)", "Packaging materials"],
+      "hi": ["कच्चा माल स्टॉक (पहले उत्पादन चक्र)", "पैकेजिंग सामग्री"],
+      "mr": ["कच्चा माल साठा (पहिली उत्पादन चक्रे)", "पॅकेजिंग साहित्य"]
+    },
+    "rolling_items": {
+      "en": ["Buffer for spoilage/seasonal raw material price shifts"],
+      "hi": ["खराब होने/मौसमी कच्चे माल की कीमत में बदलाव के लिए बफर"],
+      "mr": ["खराब होणे/हंगामी कच्च्या मालाच्या किंमतीतील बदलासाठी राखीव निधी"]
+    },
+    "cash_flow_note": {
+      "en": "Production-to-sale cycles are usually short (days to a few weeks), but building steady distribution/retail relationships can take a couple of months, so early cash flow may be inconsistent.",
+      "hi": "उत्पादन-से-बिक्री चक्र आमतौर पर छोटे होते हैं (दिनों से कुछ सप्ताह), लेकिन स्थिर वितरण/खुदरा संबंध बनाने में कुछ महीने लग सकते हैं, इसलिए शुरुआती नकदी प्रवाह असंगत हो सकता है।",
+      "mr": "उत्पादन-ते-विक्री चक्र सहसा लहान असते (काही दिवस ते काही आठवडे), पण स्थिर वितरण/किरकोळ संबंध तयार करण्यास काही महिने लागू शकतात, त्यामुळे सुरुवातीचा रोख प्रवाह विसंगत असू शकतो."
+    },
+    "notes": {
+      "en": "Raw material and packaging costs recur frequently, keeping working capital share high.",
+      "hi": "कच्चे माल और पैकेजिंग की लागत बार-बार होती है, जिससे कार्यशील पूंजी का हिस्सा अधिक रहता है।",
+      "mr": "कच्चा माल आणि पॅकेजिंगचा खर्च वारंवार येतो, त्यामुळे खेळत्या भांडवलाचा वाटा जास्त राहतो."
+    },
+    "evidence_tag": "expert_rule"
+  },
+  "agri_input_retail": {
+    "fixed_capital_pct": 0.30,
+    "working_capital_pct": 0.55,
+    "rolling_capital_pct": 0.15,
+    "fixed_items": {
+      "en": ["Shop fixtures/storage setup"],
+      "hi": ["दुकान की फिटिंग/भंडारण सेटअप"],
+      "mr": ["दुकानाची फिटिंग्ज/साठवण उभारणी"]
+    },
+    "working_items": {
+      "en": ["Initial seed/fertilizer/pesticide stock"],
+      "hi": ["प्रारंभिक बीज/उर्वरक/कीटनाशक स्टॉक"],
+      "mr": ["सुरुवातीचा बियाणे/खत/कीटकनाशक साठा"]
+    },
+    "rolling_items": {
+      "en": ["Buffer for sowing-season demand spikes"],
+      "hi": ["बुवाई के मौसम की मांग में वृद्धि के लिए बफर"],
+      "mr": ["पेरणी हंगामातील मागणी वाढीसाठी राखीव निधी"]
+    },
+    "cash_flow_note": {
+      "en": "Sales are concentrated around sowing seasons (typically 2-3 windows per year), so revenue will be lumpy rather than steady month to month — plan the rolling buffer around these cycles.",
+      "hi": "बिक्री बुवाई के मौसम के आसपास केंद्रित होती है (आमतौर पर वर्ष में 2-3 अवधि), इसलिए आय महीने-दर-महीने स्थिर होने के बजाय असमान होगी — इन चक्रों के आसपास रोलिंग बफर की योजना बनाएं।",
+      "mr": "विक्री पेरणी हंगामाभोवती केंद्रित असते (साधारणपणे वर्षातून 2-3 वेळा), त्यामुळे उत्पन्न महिन्यागणिक स्थिर न राहता असमान असेल — या चक्रांभोवती राखीव निधीचे नियोजन करा."
+    },
+    "notes": {
+      "en": "Stock-heavy business tied to sowing seasons, so working capital dominates and the rolling buffer matters more here given high seasonality risk.",
+      "hi": "बुवाई के मौसम से जुड़ा स्टॉक-प्रधान व्यवसाय, इसलिए कार्यशील पूंजी हावी रहती है और उच्च मौसमी जोखिम को देखते हुए रोलिंग बफर यहां अधिक मायने रखता है।",
+      "mr": "पेरणी हंगामाशी जोडलेला साठा-प्रधान व्यवसाय, त्यामुळे खेळते भांडवल प्रबळ असते आणि उच्च हंगामी जोखमीमुळे राखीव निधी येथे अधिक महत्त्वाचा ठरतो."
+    },
+    "evidence_tag": "expert_rule"
+  }
+}

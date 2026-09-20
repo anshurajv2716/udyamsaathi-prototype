@@ -1,0 +1,95 @@
+{
+  "district": "Ahmednagar",
+  "state": "Maharashtra",
+  "population_context": {
+    "district_population_2011": 4543159,
+    "district_area_sq_km": 17048,
+    "district_urban_pct_2011": 17.67,
+    "target_taluka": "Rahata",
+    "rahata_taluka_population_2011": 320485,
+    "rahata_taluka_villages": 60,
+    "value": "Predominantly agrarian district (only 17.67% urban district-wide, 2011) with a large land area; agriculture accounts for over 85-90% of land use in most talukas. More dependent on agricultural cycles and local mandi networks than Pune's peri-urban belt.",
+    "evidence_tag": "direct_data",
+    "source_note": "Census of India 2011. Update if newer census microdata becomes available before submission."
+  },
+  "msme_density_reference": {
+    "district_total_udyam_registered_msmes": 29941,
+    "as_of_date": "2021-07-31",
+    "evidence_tag": "direct_data",
+    "source_note": "Total Udyam-registered MSMEs for Ahmednagar district, from DC-MSME bulletin. District-wide total, not sector-specific."
+  },
+  "sectors": {
+    "dairy": {
+      "demand_proxy": 82,
+      "competition_proxy": 45,
+      "seasonality_risk": 25,
+      "logistics_access": 60,
+      "investment_range_min": 80000,
+      "investment_range_max": 1500000,
+      "notes": "Very strong dairy tradition (region known for dairy cooperatives) with lower competition density per capita than Pune, but logistics/distribution to larger markets is weaker due to distance from major urban centers.",
+      "notes_hi": "बहुत मजबूत डेयरी परंपरा (यह क्षेत्र डेयरी सहकारी समितियों के लिए जाना जाता है) जिसमें पुणे की तुलना में प्रति व्यक्ति प्रतिस्पर्धा घनत्व कम है, लेकिन बड़े शहरी केंद्रों से दूरी के कारण बड़े बाजारों तक लॉजिस्टिक्स/वितरण कमजोर है।",
+      "notes_mr": "अतिशय मजबूत दुग्धव्यवसाय परंपरा (हा प्रदेश दुग्ध सहकारी संस्थांसाठी ओळखला जातो) ज्यात पुण्यापेक्षा दरडोई स्पर्धेची घनता कमी आहे, पण मोठ्या शहरी केंद्रांपासूनच्या अंतरामुळे मोठ्या बाजारपेठांपर्यंत लॉजिस्टिक्स/वितरण कमकुवत आहे.",
+      "evidence_tag": "expert_rule"
+    },
+    "retail": {
+      "demand_proxy": 55,
+      "competition_proxy": 50,
+      "seasonality_risk": 20,
+      "logistics_access": 58,
+      "investment_range_min": 50000,
+      "investment_range_max": 700000,
+      "notes": "Moderate steady demand tied to agricultural income cycles; competition lower than Pune peri-urban belt but purchasing power is more seasonal (tied to harvest cycles).",
+      "notes_hi": "कृषि आय चक्रों से जुड़ी मध्यम स्थिर मांग; पुणे के उप-शहरी क्षेत्र की तुलना में प्रतिस्पर्धा कम है, लेकिन क्रय शक्ति अधिक मौसमी है (फसल चक्रों से जुड़ी हुई)।",
+      "notes_mr": "कृषी उत्पन्न चक्रांशी जोडलेली मध्यम स्थिर मागणी; पुण्याच्या निमशहरी भागापेक्षा स्पर्धा कमी आहे, पण क्रयशक्ती अधिक हंगामी आहे (कापणी चक्रांशी जोडलेली).",
+      "evidence_tag": "expert_rule"
+    },
+    "tailoring": {
+      "demand_proxy": 48,
+      "competition_proxy": 30,
+      "seasonality_risk": 40,
+      "logistics_access": 55,
+      "investment_range_min": 25000,
+      "investment_range_max": 250000,
+      "notes": "Lower baseline demand than Pune but also lower competition; higher seasonality risk tied to festival/wedding season concentration.",
+      "notes_hi": "पुणे की तुलना में आधारभूत मांग कम है लेकिन प्रतिस्पर्धा भी कम है; त्योहार/शादी के मौसम की सघनता से जुड़ा उच्च मौसमी जोखिम।",
+      "notes_mr": "पुण्यापेक्षा मूळ मागणी कमी आहे पण स्पर्धाही कमी आहे; सण/लग्नसराईच्या हंगामाच्या एकवटलेपणामुळे जास्त हंगामी जोखीम.",
+      "evidence_tag": "expert_rule"
+    },
+    "poultry": {
+      "demand_proxy": 68,
+      "competition_proxy": 35,
+      "seasonality_risk": 30,
+      "logistics_access": 55,
+      "investment_range_min": 55000,
+      "investment_range_max": 1000000,
+      "notes": "Reasonable local demand and lower competition than peri-urban Pune, but logistics for reaching bigger markets is weaker; more exposed to summer heat-related seasonality.",
+      "notes_hi": "उचित स्थानीय मांग और पुणे के उप-शहरी क्षेत्र की तुलना में कम प्रतिस्पर्धा, लेकिन बड़े बाजारों तक पहुंचने के लिए लॉजिस्टिक्स कमजोर है; गर्मी से जुड़ी मौसमी स्थिति का अधिक प्रभाव।",
+      "notes_mr": "योग्य स्थानिक मागणी आणि पुण्याच्या निमशहरी भागापेक्षा कमी स्पर्धा, पण मोठ्या बाजारपेठांपर्यंत पोहोचण्यासाठी लॉजिस्टिक्स कमकुवत आहे; उन्हाळ्याशी संबंधित हंगामी परिणामांचा जास्त धोका.",
+      "evidence_tag": "expert_rule"
+    },
+    "food_processing": {
+      "demand_proxy": 58,
+      "competition_proxy": 32,
+      "seasonality_risk": 35,
+      "logistics_access": 55,
+      "investment_range_min": 65000,
+      "investment_range_max": 900000,
+      "notes": "Agri-linked food processing (e.g. from local farm produce) has decent potential given raw material proximity, though market reach beyond the district is more limited.",
+      "notes_hi": "स्थानीय कृषि उपज से जुड़ा खाद्य प्रसंस्करण कच्चे माल की निकटता को देखते हुए अच्छी संभावना रखता है, हालांकि जिले के बाहर बाजार तक पहुंच अधिक सीमित है।",
+      "notes_mr": "स्थानिक शेती उत्पादनाशी संबंधित अन्न प्रक्रियेला कच्च्या मालाच्या जवळीकीमुळे चांगली क्षमता आहे, तरीही जिल्ह्याबाहेर बाजारपेठेपर्यंत पोहोच अधिक मर्यादित आहे.",
+      "evidence_tag": "expert_rule"
+    },
+    "agri_input_retail": {
+      "demand_proxy": 75,
+      "competition_proxy": 40,
+      "seasonality_risk": 45,
+      "logistics_access": 58,
+      "investment_range_min": 90000,
+      "investment_range_max": 850000,
+      "notes": "Strong demand given the district's agrarian base, but highly tied to sowing-season timing, creating the highest seasonality risk among sectors here.",
+      "notes_hi": "जिले के कृषि आधार को देखते हुए मजबूत मांग, लेकिन बुवाई के मौसम के समय से अत्यधिक जुड़ी हुई, जिससे यहां के क्षेत्रों में सबसे अधिक मौसमी जोखिम बनता है।",
+      "notes_mr": "जिल्ह्याच्या कृषी आधारामुळे मजबूत मागणी, पण पेरणीच्या हंगामाच्या वेळेशी अत्यंत घट्ट जोडलेली, ज्यामुळे येथील क्षेत्रांमध्ये सर्वाधिक हंगामी जोखीम निर्माण होते.",
+      "evidence_tag": "expert_rule"
+    }
+  }
+}
