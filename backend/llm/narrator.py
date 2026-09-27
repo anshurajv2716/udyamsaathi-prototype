@@ -120,13 +120,12 @@ other than "•". Do not number the bullets. Output only the 3 bullet lines,
 entirely in {lang_name}.
 """
 
-
 _FALLBACK_TEMPLATES = {
     "en": (
-        "• Right now, out of your Rs.{total:,.0f}, plan to spend Rs.{fixed:,.0f} on fixed assets and "
-        "Rs.{working:,.0f} on working capital, keeping Rs.{rolling:,.0f} as a reserve.\n"
+        "• Right now, out of your ₹{total:,.0f}, plan to spend ₹{fixed:,.0f} on fixed assets and "
+        "₹{working:,.0f} on working capital, keeping ₹{rolling:,.0f} as a reserve.\n"
         "• This sector shows a feasibility score of {score}/100 ({recommendation}). {outlook}\n"
-        "• As an additional option to scale up later, you are eligible for a loan of Rs.{loan:,.0f} "
+        "• As an additional option to scale up later, you are eligible for a loan of ₹{loan:,.0f} "
         "under the {scheme}."
     ),
     "hi": (

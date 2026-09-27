@@ -26,6 +26,21 @@ export interface FinancialPlan {
   notes: string;
 }
 
+// NEW — one bullet inside a single SWOT quadrant
+export interface SwotItem {
+  text: string;
+  evidence_tag: string;
+  factor: string;
+}
+
+// NEW — the full four-quadrant SWOT panel returned by the feasibility engine
+export interface SwotPanel {
+  strengths: SwotItem[];
+  weaknesses: SwotItem[];
+  opportunities: SwotItem[];
+  threats: SwotItem[];
+}
+
 export interface FeasibilityResult {
   district: string;
   sector: string;
@@ -34,9 +49,19 @@ export interface FeasibilityResult {
   investment_range_min: number;
   investment_range_max: number;
   factor_breakdown: Record<string, number>;
+  factor_bands: Record<string, string>;
   strongest_factor: string;
   weakest_factor: string;
   swot_notes: string;
+  swot: SwotPanel;        // NEW
+  threats: SwotItem[];    // NEW — same list as swot.threats, exposed directly
+  evidence_tag: string;
+}
+
+export interface ProfitabilityStage {
+  phase: string;
+  label: string;
+  text: string;
   evidence_tag: string;
 }
 
@@ -46,6 +71,8 @@ export interface ProfitabilityOutlook {
   typical_stabilization_window: string;
   evidence_tag: string;
   disclaimer: string;
+  stages: ProfitabilityStage[];
+
 }
 
 export interface CapitalStructure {
