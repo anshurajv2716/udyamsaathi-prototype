@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { WelcomeScreen } from "./screen/WelcomeScreen";
 import { LocateScreen } from "./screen/LocateScreen";
 import { BuffetScreen } from "./screen/BuffetScreen";
 import { CapitalScreen } from "./screen/CapitalScreen";
@@ -7,10 +8,10 @@ import { ReportScreen } from "./screen/ReportScreen";
 import { LanguageToggle } from "./components/LanguageToggle";
 import { type Language, getTranslation } from "./translations";
 
-type Step = "locate" | "buffet" | "capital" | "report";
+type Step = "welcome" | "locate" | "buffet" | "capital" | "report";
 
 function App() {
-  const [step, setStep] = useState<Step>("locate");
+  const [step, setStep] = useState<Step>("welcome");
   const [district, setDistrict] = useState("");
   const [subLocation, setSubLocation] = useState("");
   const [sector, setSector] = useState("");
@@ -33,6 +34,18 @@ function App() {
   function handleCapitalSubmit(c: number) {
     setCapital(c);
     setStep("report");
+  }
+
+  // The welcome page is its own full-screen page — it has its own title and
+  // its own big language buttons, so it does NOT get the shared header below.
+  if (step === "welcome") {
+    return (
+      <WelcomeScreen
+        language={language}
+        onLanguageChange={setLanguage}
+        onStart={() => setStep("locate")}
+      />
+    );
   }
 
   return (
