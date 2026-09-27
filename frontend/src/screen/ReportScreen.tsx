@@ -23,9 +23,10 @@ import { ExportMenu } from "../components/ExportMenu";
 import { GovernmentSchemes } from "../components/GovernmentSchemes";
 import { SwotPanel } from "../components/SwotPanel";
 import { FactorBandGrid } from "../components/FactorBandGrid";
+import { ProfitabilityTimeline } from "../components/ProfitabilityTimeline";
+import { MarketInsightBanner } from "../components/MarketInsightBanner";
 import { ReportTabs, type ReportTab } from "../components/ReportTabs";
 import { FaqScreen } from "./FaqScreen";
-import { ProfitabilityTimeline } from "../components/ProfitabilityTimeline";
 import { type Language, getTranslation, getSectorName, getRecommendationLabel, getSchemeName } from "../translations";
 
 interface ReportScreenProps {
@@ -40,10 +41,9 @@ const INR = (n: number) =>
   new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(n);
 
 // ---------------------------------------------------------------------
-// Shared card shell. Same white-card-on-cream look as before, now with an
-// icon + colored left accent per section so the Advisory tab matches the
-// visual polish already on the Govt Schemes tab. Purely presentational —
-// no data or prop changes below this point.
+// Shared card shell. White-card-on-cream look, with an icon + colored
+// left accent per section. Purely presentational — no data/prop changes
+// below this point.
 // ---------------------------------------------------------------------
 interface ReportCardProps {
   icon: LucideIcon;
@@ -152,6 +152,8 @@ export function ReportScreen({ district, sector, capital, onBack, language }: Re
               </h2>
 
               <ExportMenu reportRef={reportRef} filename={`UdyamSaathi_${sector}_report`} language={language} />
+
+              <MarketInsightBanner sector={sector} language={language} />
 
               <ReportCard icon={Lightbulb} accent="#B8862B" title={t.whatThisMeans}>
                 <ul style={{ margin: 0, paddingLeft: "1.25rem", lineHeight: 1.6, color: "#2B2B22" }}>
@@ -262,15 +264,10 @@ export function ReportScreen({ district, sector, capital, onBack, language }: Re
                 </div>
               </ReportCard>
 
-              {/* Local Feasibility card: FactorBandGrid (the quick-glance
-                  4-box qualitative grid — Market Demand / Competition /
-                  Logistics / Seasonality Risk) sits above SwotPanel (the
-                  deeper Strengths/Weaknesses/Opportunities/Threats
-                  breakdown) — both draw from the same 4 scoring factors,
-                  shown at two levels of detail, not as a replacement for
-                  one another. Requires backend/engines/feasibility_engine.py
-                  to return factor_bands (Phase 6) and types.ts's
-                  FeasibilityResult to declare that field. */}
+              {/* Local Feasibility card: FactorBandGrid (quick-glance 4-box
+                  qualitative grid) sits above SwotPanel (deeper breakdown) —
+                  both draw from the same 4 scoring factors, shown at two
+                  levels of detail. */}
               <ReportCard icon={MapPin} accent="#2563EB" title={`${t.localFeasibility} — ${getSectorName(data.feasibility_report.sector, language)}`}>
                 <p>{t.scoreLabel}: <strong>{data.feasibility_report.score} / 100</strong> ({getRecommendationLabel(data.feasibility_report.recommendation, language)})</p>
                 <p>{data.feasibility_report.swot_notes}</p>

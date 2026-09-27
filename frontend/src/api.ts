@@ -1,7 +1,7 @@
 import type { AdvisoryResponse, FeasibilityResult } from "./types";
 import type { Language } from "./translations";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "/api";
 
 export async function getSectorBuffet(district: string, language: Language = "en"): Promise<FeasibilityResult[]> {
   const res = await fetch(`${API_BASE}/feasibility-compare?district=${district}&language=${language}`);
