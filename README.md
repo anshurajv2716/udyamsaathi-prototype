@@ -4,12 +4,23 @@
 
 **Smart India Hackathon 2026 · SIH26091 · Team NEXUS**
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-udyamsaathi.site-2F5233?style=for-the-badge)](https://udyamsaathi.site)
+![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
 ![Smart India Hackathon 2026](https://img.shields.io/badge/Smart%20India%20Hackathon-2026-2F5233?style=for-the-badge)
 ![React TypeScript](https://img.shields.io/badge/React-TypeScript-3178C6?style=for-the-badge&logo=react&logoColor=white)
 ![FastAPI Python](https://img.shields.io/badge/FastAPI-Python-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Gemini](https://img.shields.io/badge/AI-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 **📍 Local Insights** · **💰 Financial Planning** · **🏦 Scheme Guidance** · **📊 Business Advisory**
+
+---
+
+## 🌐 Live Demo
+
+### 👉 **[https://udyamsaathi.site](https://udyamsaathi.site)**
+
+Try it out: pick a district, choose a business sector, enter your available capital, and get a complete advisory report in English, Hindi or Marathi. The report can also be exported as PDF/PNG or emailed to you.
 
 ---
 
@@ -115,6 +126,9 @@ Informational and navigational only — not for approving or disbursing loans.
 
 Static interface labels are maintained through the central translation system, while computed advisory content is supplied through the backend response.
 
+### 📧 9. Export & Email Reports
+Download the report as PDF/PNG, or have it emailed from `reports@udyamsaathi.site`.
+
 ---
 
 ## 🖥️ User Journey
@@ -175,7 +189,7 @@ frontend/src/
               │   React + TypeScript   │
               │       Frontend         │
               └───────────┬────────────┘
-                          │ API / HTTP
+                          │ HTTPS · /api/*
                           ▼
               ┌────────────────────────┐
               │     FastAPI Backend    │
@@ -219,23 +233,29 @@ frontend/src/
 
 The frontend does not hardcode computed business logic or financial numbers. The backend provides the structured `AdvisoryResponse`, while `translations.ts` handles static interface text — headings, buttons, labels, sector names, scheme labels. This separation keeps computation and presentation distinct.
 
+The frontend calls the backend through a relative base path (`/api`, defined in `frontend/src/api.ts`). In production, the frontend and the API are served from the same domain, so no CORS configuration is needed. During local development, Vite proxies `/api/*` to the local FastAPI server.
+
 ---
 
 ## 📂 Project Structure
 
 ```text
 UdyamSaathi/
+├── api/
+│   └── index.py              # Vercel entry point — mounts the FastAPI app under /api
 ├── frontend/
-│   └── src/
-│       ├── assets/
-│       ├── components/
-│       ├── screen/
-│       ├── api.ts
-│       ├── faqData.ts
-│       ├── govtSchemesData.ts
-│       ├── sectorImages.ts
-│       ├── translations.ts
-│       └── types.ts
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── screen/
+│   │   ├── api.ts
+│   │   ├── faqData.ts
+│   │   ├── govtSchemesData.ts
+│   │   ├── sectorImages.ts
+│   │   ├── translations.ts
+│   │   └── types.ts
+│   ├── package.json
+│   └── vite.config.ts
 ├── backend/
 │   ├── engines/
 │   │   ├── feasibility_engine.py
@@ -245,9 +265,12 @@ UdyamSaathi/
 │   ├── llm/
 │   │   └── narrator.py
 │   ├── data/
-│   └── main.py
+│   ├── main.py
+│   ├── requirements.txt
+│   └── .env.example
+├── requirements.txt          # Installed by Vercel — keep in sync with backend/requirements.txt
+├── vercel.json               # Build + routing configuration
 ├── .gitignore
-├── package.json
 └── README.md
 ```
 
@@ -272,44 +295,109 @@ UdyamSaathi/
 | 📊 Charts | Recharts |
 | 🎯 Icons | lucide-react |
 | 🐍 Backend | FastAPI + Python |
-| 🤖 AI Narrative | Gemini |
+| 🤖 AI Narrative | Gemini (`google-genai`) |
 | 📄 Export | html2canvas + jsPDF |
-| 📧 Email | Resend |
+| 📧 Email | Resend (verified domain) |
 | 🗂️ Data | Flat JSON files |
+| ☁️ Hosting | Vercel (frontend + Python serverless backend) |
+| 🌐 Domain | Namecheap — `udyamsaathi.site` |
 | 🔀 Version Control | Git + GitHub |
+
+---
+
+## ☁️ Deployment
+
+UdyamSaathi is deployed as a **single Vercel project** that serves both the React frontend and the FastAPI backend under one domain.
+
+| Part | Tech | Where it runs |
+|---|---|---|
+| Frontend | React + TypeScript + Vite | Vercel (static build) |
+| Backend API | FastAPI (Python) | Vercel (Python function, mounted at `/api`) |
+| AI narrative | Google Gemini via `google-genai` | Called from `backend/llm/narrator.py` |
+| Email reports | Resend | Sent from `reports@udyamsaathi.site` |
+| Domain & DNS | Namecheap | `udyamsaathi.site` → Vercel |
+
+### How the routing works
+
+- `vercel.json` builds `frontend/` as a static site and `api/index.py` as a Python function.
+- Requests to `/api/*` are routed to `api/index.py`, which mounts the FastAPI app from `backend/main.py` under the `/api` prefix.
+- Everything else (including `/assets/*`) is served from the frontend build, with `index.html` as the fallback.
+- Because the frontend and the API share one domain, the browser never makes a cross-origin call, so no CORS setup is required.
+
+### Deploying your own copy
+
+1. Fork or clone this repository and import it into [Vercel](https://vercel.com) as a **new project**. Keep the **Root Directory** as the repository root (`./`).
+2. Add the [environment variables](#-environment-variables) in **Project → Settings → Environment Variables**.
+3. Deploy. Every push to `main` triggers a new production deployment automatically.
+4. *(Optional)* Add a custom domain in **Project → Settings → Domains** and add the DNS records Vercel shows at your domain registrar.
+5. *(Optional, for emails to any recipient)* Add your domain in the Resend dashboard and add the DNS records it shows (a DKIM `TXT` record plus SPF `CNAME` records; a DMARC `TXT` record is recommended).
+
+### Good to know
+
+- **Two `requirements.txt` files:** Vercel installs the one at the repository root, while `backend/requirements.txt` is used for local development. Keep both in sync when adding a Python dependency.
+- **Local-only packages:** `uvicorn` is needed only to run the backend locally, so it is not listed in `requirements.txt`.
+- **Python version:** Vercel currently builds the backend with Python 3.12.
+
+### 📧 Note on emails
+
+Reports are sent from a newly created domain, so the first emails may land in the **Spam** folder. SPF, DKIM and DMARC are all configured and passing — this is a sender-reputation effect that improves over time. If you do not see the report in your inbox, please check your Spam folder.
+
+---
+
+## 🔑 Environment Variables
+
+Set these in Vercel (**Project → Settings → Environment Variables**) or in `backend/.env` for local development. A template is provided in [`backend/.env.example`](backend/.env.example).
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `GEMINI_API_KEY` | ✅ Yes | Gemini API key used to generate the AI narrative |
+| `RESEND_API_KEY` | ✅ Yes | Resend API key used for the "Email me" feature |
+| `GEMINI_MODEL` | Optional | Overrides the default Gemini model |
+| `EMAIL_FROM_ADDRESS` | Optional | Overrides the default sender (`UdyamSaathi <reports@udyamsaathi.site>`) |
+
+> ⚠️ **Never commit real API keys.** `.env` files are git-ignored, and this repository is public.
 
 ---
 
 ## 🚀 Running Locally
 
 ### Prerequisites
-- Python 3.11+ · Node.js 18+ · Gemini API key · Resend API key (optional, for email reports)
+- Python 3.11+ · Node.js 20+ · Gemini API key · Resend API key (optional, for email reports)
 
-### Backend
+### 1. Backend
 
 ```powershell
 cd backend
+python -m venv venv
 venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+pip install uvicorn
 ```
 
-`.env` inside `backend/` (never commit this):
+Create a `.env` file inside `backend/` (copy `.env.example` and fill in your own keys — never commit this file):
+
 ```env
 GEMINI_API_KEY=your_key_here
 RESEND_API_KEY=your_key_here
 ```
 
+Start the server:
+
 ```powershell
 uvicorn main:app --reload --port 8000
 ```
-Docs at `http://localhost:8000/docs`
 
-### Frontend
+Interactive API docs: `http://localhost:8000/docs`
+
+### 2. Frontend (in a second terminal)
 
 ```bash
 cd frontend
+npm install
 npm run dev
 ```
-Runs at `http://localhost:5173`, expects the backend at `http://localhost:8000`.
+
+Runs at `http://localhost:5173`. In development, Vite proxies `/api/*` to the backend at `http://localhost:8000` (configured in `frontend/vite.config.ts`).
 
 ---
 
@@ -320,6 +408,8 @@ Runs at `http://localhost:5173`, expects the backend at `http://localhost:8000`.
 - ✅ PDF/PNG export · Email report delivery
 - ✅ Factor analysis · SWOT-style analysis · Profitability timeline
 - ✅ Government scheme guidance · FAQ/onboarding experience · Redesigned report interface
+- ✅ Deployed on Vercel (frontend + FastAPI backend) with custom domain [udyamsaathi.site](https://udyamsaathi.site)
+- ✅ Email reports sent from a verified Resend domain (SPF, DKIM and DMARC passing)
 - 🚧 Per-sector market-insight banner (Phase H7)
 - 🚧 Hero section for the advisory report screen
 - 🚧 Expansion of district and sector coverage
@@ -335,6 +425,7 @@ Runs at `http://localhost:5173`, expects the backend at `http://localhost:8000`.
 | 💡 Problem | AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant for Rural Micro-Entrepreneurs |
 | 👥 Team | NEXUS |
 | 👤 Team Lead | Anshu Raj Verma |
+| 🌐 Live Demo | [udyamsaathi.site](https://udyamsaathi.site) |
 
 ---
 
