@@ -7,3 +7,4 @@ typing_extensions==4.16.0
 urllib3==2.8.0
 fastapi
 google-genai
+python-dotenv
