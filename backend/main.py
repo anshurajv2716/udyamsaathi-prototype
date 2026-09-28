@@ -102,7 +102,7 @@ def send_report_email(payload: EmailReportRequest):
     try:
         resend.Emails.send(
             {
-                "from": os.getenv("EMAIL_FROM_ADDRESS", "UdyamSaathi <onboarding@resend.dev>"),
+                "from": os.getenv("EMAIL_FROM_ADDRESS", "UdyamSaathi <reports@udyamsaathi.site>"),
                 "to": [payload.email],
                 "subject": _EMAIL_SUBJECTS[lang],
                 "html": _EMAIL_BODIES[lang],
