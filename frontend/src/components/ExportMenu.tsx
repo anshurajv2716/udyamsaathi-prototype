@@ -4,7 +4,7 @@ import { type Language, getTranslation } from "../translations";
 
 // NOTE: confirm this matches the base URL your api.ts uses for the backend.
 // Adjust here (or wire this from the same constant api.ts uses) if different.
-const API_BASE_URL = (import.meta as any).env?.VITE_API_BASE_URL || "http://localhost:8000";
+const API_BASE_URL = "/api";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
